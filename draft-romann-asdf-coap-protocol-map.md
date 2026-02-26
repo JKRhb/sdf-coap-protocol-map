@@ -48,8 +48,9 @@ This memo defines vocabulary to integrate the Constrained Application Protocol (
 
 # Conventions and Definitions
 
-{::boilerplate bcp14-tagged}
+The definitions of {{-sdf}}, {{-sdf-protocol-mapping}}, and {{-sdf-instance-information}} apply.
 
+{::boilerplate bcp14-tagged}
 
 # Security Considerations
 
