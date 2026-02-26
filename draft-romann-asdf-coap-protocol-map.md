@@ -26,6 +26,9 @@ author:
     email: jan.romann@uni-bremen.de
 
 normative:
+  RFC7252: coap
+  RFC9880: sdf
+  I-D.ietf-asdf-sdf-protocol-mapping: sdf-protocol-mapping
 
 informative:
 
