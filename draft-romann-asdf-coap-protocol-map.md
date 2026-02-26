@@ -27,6 +27,7 @@ author:
 
 normative:
   RFC7252: coap
+  RFC8610: cddl
   RFC9880: sdf
   I-D.ietf-asdf-sdf-protocol-mapping: sdf-protocol-mapping
   I-D.ietf-asdf-instance-information: sdf-instance-information
@@ -75,6 +76,16 @@ TODO Security
 
 This document has no IANA actions.
 
+# Formal Syntax of the SDF Protocol Mapping for CoAP  {#syntax}
+
+This normative appendix describes the syntax of this protocol mapping definition using CDDL {{-cddl}}.
+
+<!-- TODO: Actually add extension points -->
+Via the defined extension points, future specifications may add new definitions to the CDDL schema.
+
+~~~ cddl
+{::include sdf-coap-protocol-map.cddl}
+~~~
 
 --- back
 

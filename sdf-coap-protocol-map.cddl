@@ -1,0 +1,71 @@
+same-document-pointer = text .regexp "[^:#]*"
+
+$$SDF-PROPERTY-PROTOCOL-MAP //= (
+  coap: coap-property-map
+)
+
+$$SDF-EVENT-PROTOCOL-MAP //= (
+  coap: coap-event-map
+)
+
+$$SDF-ACTION-PROTOCOL-MAP //= (
+  coap: coap-action-map
+)
+
+coap-parameters = {
+    ? host: same-document-pointer
+    ? ipAddress: same-document-pointer
+}
+
+common-coap-definitions = (
+  sdfParameters: coap-parameters
+)
+
+coap-vocabulary = {
+  scheme: "coap" / "coaps" / "coap+tcp" / "coaps+tcp" / "coap+ws" / "coaps+ws"
+  method: "GET" / "POST" / "PUT" / "DELETE" / "FETCH" / "PATCH" / "iPATCH" ; TODO: Can we make this list extendable?
+  href: text ; TODO: Should we support URI Template variables here?
+
+  ; An affordance can support multiple Content-Formats as input/output
+  ? contentFormat: [ * uint ]
+  ? accept: [ * uint ]
+
+  ? minPollingInterval: uint
+  ? blockwise: blockwise-parameters
+  ? qblockwise: blockwise-parameters
+}
+
+blockwise-parameters = {
+  ? block1Size: 16 / 32 / 64 / 128 / 256 / 512 / 1024
+  ? block2Size: 16 / 32 / 64 / 128 / 256 / 512 / 1024
+}
+
+coap-property-map = {
+  common-coap-definitions
+  sdfOperations: coap-property-operations
+}
+
+coap-action-map = {
+  common-coap-definitions
+  sdfOperations: coap-action-operations
+}
+
+coap-event-map = {
+  common-coap-definitions
+  sdfOperations: coap-event-operations
+}
+
+; TODO: Add extension points
+
+coap-property-operations = {
+    read: coap-vocabulary ; Also covers observe via the Observe option
+    write: coap-vocabulary
+}
+
+coap-action-operations = {
+    invoke: coap-vocabulary
+}
+
+coap-event-operations = {
+    subscribe: coap-vocabulary
+}
