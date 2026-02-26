@@ -11,14 +11,14 @@ category: std
 submissiontype: IETF
 consensus: true
 
-area: Applications
-workgroup: ASDF
+area: "Applications and Real-Time"
+workgroup: "A Semantic Definition Format for Data and Interactions of Things"
 keyword: Internet-Draft
 
 venue:
-  group: A Semantic Definition Format for Data and Interactions of Things (asdf)
-  mail: asdf@ietf.org
-  github: JKRhb/sdf-coap-protocol-map
+  group: "A Semantic Definition Format for Data and Interactions of Things"
+  mail: "asdf@ietf.org"
+  github: "JKRhb/sdf-coap-protocol-map"
 
 author:
   - name: Jan Romann
