@@ -32,6 +32,13 @@ normative:
   I-D.ietf-asdf-instance-information: sdf-instance-information
 
 informative:
+  WoT-CoAP-Binding:
+    title: Web of Things (WoT) CoAP Binding
+    author:
+      - name: Klaus Hartke
+      - name: Jan Romann
+    date: false
+    target: https://w3c.github.io/wot-binding-templates/bindings/protocols/coap/index.html
 
 ...
 
