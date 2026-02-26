@@ -68,8 +68,9 @@ The definitions of {{-sdf}}, {{-sdf-protocol-mapping}}, and {{-sdf-instance-info
 
 # Security Considerations
 
-TODO Security
+The security considerations of {{-sdf}} as well as {{-coap}} apply to this document as well.
 
+<!-- TODO: Add additional references/considerations. -->
 
 # IANA Considerations
 
