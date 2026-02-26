@@ -66,6 +66,30 @@ The definitions of {{-sdf}}, {{-sdf-protocol-mapping}}, and {{-sdf-instance-info
 
 {::boilerplate bcp14-tagged}
 
+# CoAP Protocol Mapping
+
+TODO
+
+## General Considerations
+
+TODO
+
+## Properties
+
+TODO
+
+## Actions
+
+TODO
+
+## Events
+
+TODO
+
+# Examples
+
+TODO
+
 # Security Considerations
 
 The security considerations of {{-sdf}} as well as {{-coap}} apply to this document as well.
