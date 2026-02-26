@@ -115,7 +115,8 @@ Table of Contents
 
 3.  Security Considerations
 
-   TODO Security
+   The security considerations of [RFC9880] as well as [RFC7252] apply
+   to this document as well.
 
 4.  IANA Considerations
 
