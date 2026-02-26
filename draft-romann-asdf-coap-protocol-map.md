@@ -52,6 +52,13 @@ This memo defines vocabulary to integrate the Constrained Application Protocol (
 
 This memo defines vocabulary to integrate the Constrained Application Protocol (CoAP) {{-coap}} into Protocol Mappings {{-sdf-protocol-mapping}} for the Semantic Definition Format (SDF) for Data and Interactions of Things {{-sdf}}.
 
+<!-- TODO: Maybe this reference to WoT TD can also be removed later. -->
+
+The vocabulary and "feature-based" approach taken within this document is heavily inspired by the CoAP Protocol Binding {{WoT-CoAP-Binding}} for the W3C Web of Things (WoT), which is to be used with WoT Thing Descriptions (TDs).
+Considering SDF's role as a "hub format", we aspire to be able to also take into account CoAP vocabulary when converting from and to TDs.
+
+An important additional aspect to the base protocol-mapping specification {{-sdf-protocol-mapping}} is the fact that we rely on instance-related messages {{-sdf-instance-information}} to complement protocol information present in SDF models.
+Compared to the WoT approach, we achieve a stricter separation of model and instance information this way, reducing the amount of information that needs to be supplied by a Thing itself to a minimum to enable interactions.
 
 # Conventions and Definitions
 
