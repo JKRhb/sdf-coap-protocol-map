@@ -36,14 +36,13 @@ informative:
 
 --- abstract
 
-TODO Abstract
-
+This memo defines vocabulary to integrate the Constrained Application Protocol (CoAP) into Protocol Mappings {{-sdf-protocol-mapping}} for the Semantic Definition Format (SDF) for Data and Interactions of Things {{-sdf}}.
 
 --- middle
 
 # Introduction
 
-TODO Introduction
+This memo defines vocabulary to integrate the Constrained Application Protocol (CoAP) {{-coap}} into Protocol Mappings {{-sdf-protocol-mapping}} for the Semantic Definition Format (SDF) for Data and Interactions of Things {{-sdf}}.
 
 
 # Conventions and Definitions
