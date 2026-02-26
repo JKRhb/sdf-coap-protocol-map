@@ -31,6 +31,13 @@ author:
     city: San Jose
     country: USA
     email: rohitmo@cisco.com
+  - name: Lorenzo Corneo
+    org: Ericsson
+    street: Hirsalantie 11
+    code: 02420
+    city: Jorvas
+    country: Finland
+    email: lorenzo.corneo@ericsson.com
 
 normative:
   RFC7252: coap
