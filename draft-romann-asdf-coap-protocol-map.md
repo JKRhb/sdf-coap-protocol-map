@@ -76,6 +76,16 @@ TODO Security
 
 This document has no IANA actions.
 
+# Formal Syntax of the SDF Protocol Mapping for CoAP  {#syntax}
+
+This normative appendix describes the syntax of this protocol mapping definition using CDDL {{-cddl}}.
+
+<!-- TODO: Actually add extension points -->
+Via the defined extension points, future specifications may add new definitions to the CDDL schema.
+
+~~~ cddl
+{::include sdf-coap-protocol-map.cddl}
+~~~
 
 --- back
 
