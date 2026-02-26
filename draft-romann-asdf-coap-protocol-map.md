@@ -24,6 +24,13 @@ author:
   - name: Jan Romann
     org: Universität Bremen
     email: jan.romann@uni-bremen.de
+  - name: Rohit Mohan
+    org: Cisco Systems
+    street: 170 West Tasman Drive
+    code: 95134
+    city: San Jose
+    country: USA
+    email: rohitmo@cisco.com
 
 normative:
   RFC7252: coap
