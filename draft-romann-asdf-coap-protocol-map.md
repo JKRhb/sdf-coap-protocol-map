@@ -74,7 +74,12 @@ A protocol mapping for CoAP should cover these features, but should also be exte
 
 ## General Considerations
 
-TODO
+CoAP can be used with three all three kinds of interaction affordances: properties, actions, and events.
+The protocol mapping for an affordance will always specify the `method` as well as an `href`, which combines the URI path and potential query parameters for the resource the interaction affordance is mapped to.
+To differentiate between the available transport mechanisms, a URI `scheme` (with a default value of `coap` for CoAP over TCP) can be supplied as well.
+
+Other general qualities for CoAP include parameters for blockwise transfer, the available and accepted Content-Formats, as well as the minimal polling interval that is accepted by the respective CoAP server.
+Note that since CoAP messages do not allow for the use of generic headers as HTTP does, all of these qualities map to standardized CoAP options that are registered with IANA.
 
 ## Properties
 
