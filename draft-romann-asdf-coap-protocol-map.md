@@ -29,6 +29,7 @@ normative:
   RFC7252: coap
   RFC7641: observe
   RFC7959: blockwise
+  RFC8323: coap-tcp
   RFC9880: sdf
   I-D.ietf-asdf-sdf-protocol-mapping: sdf-protocol-mapping
   I-D.ietf-asdf-instance-information: sdf-instance-information
