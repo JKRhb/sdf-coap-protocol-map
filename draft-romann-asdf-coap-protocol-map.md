@@ -68,7 +68,9 @@ The definitions of {{-sdf}}, {{-sdf-protocol-mapping}}, and {{-sdf-instance-info
 
 # CoAP Protocol Mapping
 
-TODO
+The Constrained Application Protocol (CoAP) has been originally specified in {{-coap}}, but has since been extended via a number of specifications that features such as blockwise transfer {{-blockwise}}, the observation of resources {{-observe}}, or additional transport mechanisms {{-coap-tcp}} in addition to UDP and DTLS.
+
+A protocol mapping for CoAP should cover these features, but should also be extensible to potential future additions to the CoAP family of standards take into account as well.
 
 ## General Considerations
 
