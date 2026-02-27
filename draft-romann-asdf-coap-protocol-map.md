@@ -81,6 +81,11 @@ To differentiate between the available transport mechanisms, a URI `scheme` (wit
 Other general qualities for CoAP include parameters for blockwise transfer, the available and accepted Content-Formats, as well as the minimal polling interval that is accepted by the respective CoAP server.
 Note that since CoAP messages do not allow for the use of generic headers as HTTP does, all of these qualities map to standardized CoAP options that are registered with IANA.
 
+In contrast to the WoT approach, the protocol binding information that is supplied via this document is targeting the _model_ level.
+That means that information such as URI paths will be shared by all Thing instances that adhere to the given model.
+The information that deviates between device instances, e.g., a device's `host` name or its `ipAddress`,  is provided via instance-related messages {{-sdf-instance-information}} that pass the values for the `sdfParameters` the protocol mapping defines via designated properties.
+The selected `sdfProperty` definitions are indicated via JSON pointers within the `sdfParameters` map.
+
 ## Properties
 
 TODO
