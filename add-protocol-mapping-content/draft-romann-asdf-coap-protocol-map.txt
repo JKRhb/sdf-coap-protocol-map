@@ -4,8 +4,8 @@
 
 A Semantic Definition Format for Data and Interactions of ThingsJ. Romann
 Internet-Draft                                        Universität Bremen
-Intended status: Standards Track                        26 February 2026
-Expires: 30 August 2026
+Intended status: Standards Track                        27 February 2026
+Expires: 31 August 2026
 
 
  Semantic Definition Format (SDF): Protocol Mapping for the Constrained
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 30 August 2026.
+   This Internet-Draft will expire on 31 August 2026.
 
 Copyright Notice
 
@@ -121,11 +121,43 @@ Table of Contents
 
 3.  CoAP Protocol Mapping
 
-   TODO
+   The Constrained Application Protocol (CoAP) has been originally
+   specified in [RFC7252], but has since been extended via a number of
+   specifications that features such as blockwise transfer [RFC7959],
+   the observation of resources [RFC7641], or additional transport
+   mechanisms [RFC8323] in addition to UDP and DTLS.
+
+   A protocol mapping for CoAP should cover these features, but should
+   also be extensible to potential future additions to the CoAP family
+   of standards take into account as well.
 
 3.1.  General Considerations
 
-   TODO
+   CoAP can be used with three all three kinds of interaction
+   affordances: properties, actions, and events.  The protocol mapping
+   for an affordance will always specify the method as well as an href,
+   which combines the URI path and potential query parameters for the
+   resource the interaction affordance is mapped to.  To differentiate
+   between the available transport mechanisms, a URI scheme (with a
+   default value of coap for CoAP over TCP) can be supplied as well.
+
+   Other general qualities for CoAP include parameters for blockwise
+   transfer, the available and accepted Content-Formats, as well as the
+   minimal polling interval that is accepted by the respective CoAP
+   server.  Note that since CoAP messages do not allow for the use of
+   generic headers as HTTP does, all of these qualities map to
+   standardized CoAP options that are registered with IANA.
+
+   In contrast to the WoT approach, the protocol binding information
+   that is supplied via this document is targeting the _model_ level.
+   That means that information such as URI paths will be shared by all
+   Thing instances that adhere to the given model.  The information that
+   deviates between device instances, e.g., a device's host name or its
+   ipAddress, is provided via instance-related messages
+   [I-D.ietf-asdf-instance-information] that pass the values for the
+   sdfParameters the protocol mapping defines via designated properties.
+   The selected sdfProperty definitions are indicated via JSON pointers
+   within the sdfParameters map.
 
 3.2.  Properties
 
@@ -180,9 +212,25 @@ Table of Contents
               DOI 10.17487/RFC7252, June 2014,
               <https://www.rfc-editor.org/rfc/rfc7252>.
 
+   [RFC7641]  Hartke, K., "Observing Resources in the Constrained
+              Application Protocol (CoAP)", RFC 7641,
+              DOI 10.17487/RFC7641, September 2015,
+              <https://www.rfc-editor.org/rfc/rfc7641>.
+
+   [RFC7959]  Bormann, C. and Z. Shelby, Ed., "Block-Wise Transfers in
+              the Constrained Application Protocol (CoAP)", RFC 7959,
+              DOI 10.17487/RFC7959, August 2016,
+              <https://www.rfc-editor.org/rfc/rfc7959>.
+
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
+
+   [RFC8323]  Bormann, C., Lemay, S., Tschofenig, H., Hartke, K.,
+              Silverajan, B., and B. Raymor, Ed., "CoAP (Constrained
+              Application Protocol) over TCP, TLS, and WebSockets",
+              RFC 8323, DOI 10.17487/RFC8323, February 2018,
+              <https://www.rfc-editor.org/rfc/rfc8323>.
 
    [RFC9880]  Koster, M., Ed., Bormann, C., Ed., and A. Keränen,
               "Semantic Definition Format (SDF) for Data and
