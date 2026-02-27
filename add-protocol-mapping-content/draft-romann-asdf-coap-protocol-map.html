@@ -1243,6 +1243,9 @@ Note that since CoAP messages do not allow for the use of generic headers as HTT
 That means that information such as URI paths will be shared by all Thing instances that adhere to the given model.
 The information that deviates between device instances, e.g., a device's <code>host</code> name or its <code>ipAddress</code>,  is provided via instance-related messages <span>[<a href="#I-D.ietf-asdf-instance-information" class="cite xref">I-D.ietf-asdf-instance-information</a>]</span> that pass the values for the <code>sdfParameters</code> the protocol mapping defines via designated properties.
 The selected <code>sdfProperty</code> definitions are indicated via JSON pointers within the <code>sdfParameters</code> map.<a href="#section-3.1-3" class="pilcrow">¶</a></p>
+<p id="section-3.1-4">Per interaction affordance type, the CoAP Protocol Mapping defines at least one type of operation (<code>read</code>, <code>write</code>, <code>invoke</code>, and <code>subscribe</code>).
+Currently, the definitions for these different operations look almost identitical, with the main difference being the default method per operation.
+Future specifications may extend the set of operations per interaction affordance type.<a href="#section-3.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="properties">
@@ -1250,7 +1253,10 @@ The selected <code>sdfProperty</code> definitions are indicated via JSON pointer
         <h3 id="name-properties">
 <a href="#section-3.2" class="section-number selfRef">3.2. </a><a href="#name-properties" class="section-name selfRef">Properties</a>
         </h3>
-<p id="section-3.2-1">TODO<a href="#section-3.2-1" class="pilcrow">¶</a></p>
+<p id="section-3.2-1">With <code>sdfProperty</code>, the <code>read</code> (default method: <code>GET</code>) and the <code>write</code> (default method: <code>PUT</code>) operation may be used.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
+<p id="section-3.2-2">Note that an "observe" operation is not needed as it is already covered by the <code>read</code> operation:
+With a property that is marked as <code>observable</code>, a client can simply include the CoAP Observe option <span>[<a href="#RFC7641" class="cite xref">RFC7641</a>]</span> in its <code>GET</code> or <code>FETCH</code> request.
+If the server that receives the request should not actually support the Observe option after all, the client can simply fall back to polling.<a href="#section-3.2-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="actions">
@@ -1258,7 +1264,7 @@ The selected <code>sdfProperty</code> definitions are indicated via JSON pointer
         <h3 id="name-actions">
 <a href="#section-3.3" class="section-number selfRef">3.3. </a><a href="#name-actions" class="section-name selfRef">Actions</a>
         </h3>
-<p id="section-3.3-1">TODO<a href="#section-3.3-1" class="pilcrow">¶</a></p>
+<p id="section-3.3-1">With <code>sdfAction</code>, the <code>invoke</code> operation may be used which uses the <code>POST</code> method by default.<a href="#section-3.3-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="events">
@@ -1266,7 +1272,9 @@ The selected <code>sdfProperty</code> definitions are indicated via JSON pointer
         <h3 id="name-events">
 <a href="#section-3.4" class="section-number selfRef">3.4. </a><a href="#name-events" class="section-name selfRef">Events</a>
         </h3>
-<p id="section-3.4-1">TODO<a href="#section-3.4-1" class="pilcrow">¶</a></p>
+<p id="section-3.4-1">With <code>sdfEvent</code>, the <code>subscribe</code> operation may be used.<a href="#section-3.4-1" class="pilcrow">¶</a></p>
+<p id="section-3.4-2">This operation is very similar to the <code>read</code> operation, with the main difference that a client should assume that the indicated resource is observable.
+If using the observe option does not work, the client can also simply fall back to polling, where it may receive an answer to its request only asynchronously, once the described event actually occurs.<a href="#section-3.4-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
