@@ -1,0 +1,147 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2026-03-01T00:12:26.799082+00:00",
+  "repo": "JKRhb/sdf-coap-protocol-map",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDORZnW6c7GnGNm",
+      "title": "Add Rohit and Lorenzo as co-authors",
+      "url": "https://github.com/JKRhb/sdf-coap-protocol-map/pull/1",
+      "state": "OPEN",
+      "author": "JKRhb",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "This PR expands the list of authors with @rohitmohan96 and @lorenzocorneo.",
+      "createdAt": "2026-02-26T17:32:39Z",
+      "updatedAt": "2026-02-27T18:19:17Z",
+      "baseRepository": "JKRhb/sdf-coap-protocol-map",
+      "baseRefName": "main",
+      "baseRefOid": "6a4e7f790bc55704d679cf59f0d93d38fd579725",
+      "headRepository": "JKRhb/sdf-coap-protocol-map",
+      "headRefName": "add-co-authors",
+      "headRefOid": "7f91878fac2ed6d310b54751c21ecc6c0081f452",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDORZnW6c7mkpMS",
+          "commit": {
+            "abbreviatedOid": "7f91878"
+          },
+          "author": "rohitmohan96",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-02-27T18:19:17Z",
+          "updatedAt": "2026-02-27T18:19:17Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDORZnW6c7Gnhhq",
+      "title": "Add initial CDDL schema",
+      "url": "https://github.com/JKRhb/sdf-coap-protocol-map/pull/2",
+      "state": "OPEN",
+      "author": "JKRhb",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "This PR adds an initial CDDL schema inspired by the pre-existing [WoT CoAP Protocol Binding](https://w3c.github.io/wot-binding-templates/bindings/protocols/coap/index.html) as well as the discussion we had over the in SDF Protocol Binding repository (see https://github.com/ietf-wg-asdf/sdf-protocol-mapping/pull/7).",
+      "createdAt": "2026-02-26T18:00:22Z",
+      "updatedAt": "2026-02-26T18:05:59Z",
+      "baseRepository": "JKRhb/sdf-coap-protocol-map",
+      "baseRefName": "main",
+      "baseRefOid": "6a4e7f790bc55704d679cf59f0d93d38fd579725",
+      "headRepository": "JKRhb/sdf-coap-protocol-map",
+      "headRefName": "add-cddl",
+      "headRefOid": "9563f89beb60ab2e33878195642a006ab8b1863c",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 3,
+      "id": "PR_kwDORZnW6c7Gnw6v",
+      "title": "Add initial document content",
+      "url": "https://github.com/JKRhb/sdf-coap-protocol-map/pull/3",
+      "state": "OPEN",
+      "author": "JKRhb",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "This PR adds some initial text to the document that should reflect the content of the CDDL schema (#2) as prose.",
+      "createdAt": "2026-02-26T18:16:48Z",
+      "updatedAt": "2026-02-27T01:33:11Z",
+      "baseRepository": "JKRhb/sdf-coap-protocol-map",
+      "baseRefName": "main",
+      "baseRefOid": "2cbc4cdde90482fac021e26f0dac4367a739300d",
+      "headRepository": "JKRhb/sdf-coap-protocol-map",
+      "headRefName": "add-protocol-mapping-content",
+      "headRefOid": "7654732359b86069d203a376c70817ce666dc986",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    }
+  ]
+}
