@@ -1230,21 +1230,21 @@ appear in all capitals, as shown here.<a href="#section-2-2" class="pilcrow">¶<
       <h2 id="name-coap-protocol-mapping">
 <a href="#section-3" class="section-number selfRef">3. </a><a href="#name-coap-protocol-mapping" class="section-name selfRef">CoAP Protocol Mapping</a>
       </h2>
-<p id="section-3-1">The Constrained Application Protocol (CoAP) has been originally specified in <span>[<a href="#RFC7252" class="cite xref">RFC7252</a>]</span>, but has since been extended via a number of specifications that features such as blockwise transfer <span>[<a href="#RFC7959" class="cite xref">RFC7959</a>]</span>, the observation of resources <span>[<a href="#RFC7641" class="cite xref">RFC7641</a>]</span>, or additional transport mechanisms <span>[<a href="#RFC8323" class="cite xref">RFC8323</a>]</span> in addition to UDP and DTLS.<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-3-1">The Constrained Application Protocol (CoAP) has been originally specified in <span>[<a href="#RFC7252" class="cite xref">RFC7252</a>]</span>, but has since been extended with a number of specifications such as blockwise transfer <span>[<a href="#RFC7959" class="cite xref">RFC7959</a>]</span>, the observation of resources <span>[<a href="#RFC7641" class="cite xref">RFC7641</a>]</span>, and additional transport mechanisms <span>[<a href="#RFC8323" class="cite xref">RFC8323</a>]</span> in addition to UDP and DTLS.<a href="#section-3-1" class="pilcrow">¶</a></p>
 <p id="section-3-2">A protocol mapping for CoAP should cover these features, but should also be extensible to potential future additions to the CoAP family of standards take into account as well.<a href="#section-3-2" class="pilcrow">¶</a></p>
 <div id="general-considerations">
 <section id="section-3.1">
         <h3 id="name-general-considerations">
 <a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-general-considerations" class="section-name selfRef">General Considerations</a>
         </h3>
-<p id="section-3.1-1">CoAP can be used with three all three kinds of interaction affordances: properties, actions, and events.
-The protocol mapping for an affordance will always specify the <code>method</code> as well as an <code>href</code>, which combines the URI path and potential query parameters for the resource the interaction affordance is mapped to.
-To differentiate between the available transport mechanisms, a URI <code>scheme</code> (with a default value of <code>coap</code> for CoAP over TCP) can be supplied as well.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
+<p id="section-3.1-1">CoAP can be used with all three kinds of interaction affordances defined in SDF <span>[<a href="#RFC9880" class="cite xref">RFC9880</a>]</span>, namely, <code>sdfProperty</code>, <code>sdfAction</code>, and <code>sdfEvent</code>.
+The protocol mapping for an affordance <span class="bcp14">MUST</span> specify the <code>method</code> as well as an <code>href</code>, which combines the URI path and potential query parameters for the resource the interaction affordance is mapped to.
+To differentiate between the available transport protocols, a URI <code>scheme</code> (with a default value of <code>coap</code> for CoAP over TCP) <span class="bcp14">MAY</span> be supplied.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
 <p id="section-3.1-2">Other general qualities for CoAP include parameters for blockwise transfer, the available and accepted Content-Formats, as well as the minimal polling interval that is accepted by the respective CoAP server.
 Note that since CoAP messages do not allow for the use of generic headers as HTTP does, all of these qualities map to standardized CoAP options that are registered with IANA.<a href="#section-3.1-2" class="pilcrow">¶</a></p>
 <p id="section-3.1-3">In contrast to the WoT approach, the protocol binding information that is supplied via this document is targeting the <em>model</em> level.
 That means that information such as URI paths will be shared by all Thing instances that adhere to the given model.
-The information that deviates between device instances, e.g., a device's <code>host</code> name or its <code>ipAddress</code>,  is provided via instance-related messages <span>[<a href="#I-D.ietf-asdf-instance-information" class="cite xref">I-D.ietf-asdf-instance-information</a>]</span> that pass the values for the <code>sdfParameters</code> the protocol mapping defines via designated properties.
+Instance-specific information, e.g., a device's <code>host</code> name or its <code>ipAddress</code>,  is provided via instance-related messages <span>[<a href="#I-D.ietf-asdf-instance-information" class="cite xref">I-D.ietf-asdf-instance-information</a>]</span> that pass the values for the <code>sdfParameters</code> the protocol mapping defines via designated properties.
 The selected <code>sdfProperty</code> definitions are indicated via JSON pointers within the <code>sdfParameters</code> map.<a href="#section-3.1-3" class="pilcrow">¶</a></p>
 <p id="section-3.1-4">Per interaction affordance type, the CoAP Protocol Mapping defines at least one type of operation (<code>read</code>, <code>write</code>, <code>invoke</code>, and <code>subscribe</code>).
 Currently, the definitions for these different operations look almost identitical, with the main difference being the default method per operation.
@@ -1257,9 +1257,9 @@ Future specifications may extend the set of operations per interaction affordanc
 <a href="#section-3.2" class="section-number selfRef">3.2. </a><a href="#name-properties" class="section-name selfRef">Properties</a>
         </h3>
 <p id="section-3.2-1">With <code>sdfProperty</code>, the <code>read</code> (default method: <code>GET</code>) and the <code>write</code> (default method: <code>PUT</code>) operation may be used.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
-<p id="section-3.2-2">Note that an "observe" operation is not needed as it is already covered by the <code>read</code> operation:
+<p id="section-3.2-2">Note that an "observe" operation is <span class="bcp14">OPTIONAL</span> as it is already covered by the <code>read</code> operation:
 With a property that is marked as <code>observable</code>, a client can simply include the CoAP Observe option <span>[<a href="#RFC7641" class="cite xref">RFC7641</a>]</span> in its <code>GET</code> or <code>FETCH</code> request.
-If the server that receives the request should not actually support the Observe option after all, the client can simply fall back to polling.<a href="#section-3.2-2" class="pilcrow">¶</a></p>
+If the server that receives the request does not support the Observe option, the client can simply fall back to polling.<a href="#section-3.2-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="actions">
@@ -1277,7 +1277,7 @@ If the server that receives the request should not actually support the Observe 
         </h3>
 <p id="section-3.4-1">With <code>sdfEvent</code>, the <code>subscribe</code> operation may be used.<a href="#section-3.4-1" class="pilcrow">¶</a></p>
 <p id="section-3.4-2">This operation is very similar to the <code>read</code> operation, with the main difference that a client should assume that the indicated resource is observable.
-If using the observe option does not work, the client can also simply fall back to polling, where it may receive an answer to its request only asynchronously, once the described event actually occurs.<a href="#section-3.4-2" class="pilcrow">¶</a></p>
+If the observe option is not supported, the client can fall back to polling, where it may receive an answer to its request only asynchronously, once the described event actually occurs.<a href="#section-3.4-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
