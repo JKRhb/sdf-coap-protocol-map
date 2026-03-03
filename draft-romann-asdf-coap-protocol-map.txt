@@ -4,8 +4,11 @@
 
 A Semantic Definition Format for Data and Interactions of ThingsJ. Romann
 Internet-Draft                                        Universität Bremen
-Intended status: Standards Track                        26 February 2026
-Expires: 30 August 2026
+Intended status: Standards Track                                R. Mohan
+Expires: 4 September 2026                                  Cisco Systems
+                                                               L. Corneo
+                                                                Ericsson
+                                                            3 March 2026
 
 
  Semantic Definition Format (SDF): Protocol Mapping for the Constrained
@@ -51,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 30 August 2026.
+   This Internet-Draft will expire on 4 September 2026.
 
 Copyright Notice
 
@@ -77,7 +80,7 @@ Table of Contents
      5.1.  Normative References
      5.2.  Informative References
    Acknowledgments
-   Author's Address
+   Authors' Addresses
 
 1.  Introduction
 
@@ -134,11 +137,11 @@ Table of Contents
               instance-information-02>.
 
    [I-D.ietf-asdf-sdf-protocol-mapping]
-              Mohan, R., Brinckman, B., and L. Corneo, "Protocol Mapping
-              for SDF", Work in Progress, Internet-Draft, draft-ietf-
-              asdf-sdf-protocol-mapping-05, 24 February 2026,
+              Mohan, R., Brinckman, B., and L. Corneo, "SDF Protocol
+              Mapping", Work in Progress, Internet-Draft, draft-ietf-
+              asdf-sdf-protocol-mapping-06, 2 March 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-asdf-
-              sdf-protocol-mapping-05>.
+              sdf-protocol-mapping-06>.
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -170,8 +173,24 @@ Acknowledgments
 
    TODO acknowledge.
 
-Author's Address
+Authors' Addresses
 
    Jan Romann
    Universität Bremen
    Email: jan.romann@uni-bremen.de
+
+
+   Rohit Mohan
+   Cisco Systems
+   170 West Tasman Drive
+   San Jose,  95134
+   United States of America
+   Email: rohitmo@cisco.com
+
+
+   Lorenzo Corneo
+   Ericsson
+   Hirsalantie 11
+   FI-1296 Jorvas
+   Finland
+   Email: lorenzo.corneo@ericsson.com
