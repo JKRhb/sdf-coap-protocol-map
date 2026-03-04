@@ -98,7 +98,7 @@ Future specifications may extend the set of operations per interaction affordanc
 
 With `sdfProperty`, the `read` (default method: `GET`) and the `write` (default method: `PUT`) operation may be used.
 
-Note that an "observe" operation is OPTIONAL as it is already covered by the `read` operation:
+Note that this memo does not define an "observe" operation as it is already covered by the `read` operation:
 With a property that is marked as `observable`, a client can simply include the CoAP Observe option {{-observe}} in its `GET` or `FETCH` request.
 If the server that receives the request does not support the Observe option, the client can simply fall back to polling.
 
