@@ -182,8 +182,8 @@ Table of Contents
 
 3.3.  Actions
 
-   With sdfAction, the invoke operation may be used which uses the POST
-   method by default.
+   In the case sdfAction, an invoke operation is supported when using
+   CoAP.  This operation uses the POST method by default.
 
 3.4.  Events
 
