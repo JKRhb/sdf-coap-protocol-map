@@ -170,8 +170,8 @@ Table of Contents
 
 3.2.  Properties
 
-   With sdfProperty, the read (default method: GET) and the write
-   (default method: PUT) operation may be used.
+   With sdfProperty, a read operation (default method: GET) and a write
+   operation (default method: PUT) are supported when using CoAP.
 
    Note that this memo does not define an "observe" operation as it is
    already covered by the read operation: With a property that is marked
