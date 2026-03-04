@@ -111,7 +111,7 @@ This operation uses the `POST` method by default.
 
 In the case of `sdfEvent`, a `subscribe` operation is supported when using CoAP.
 
-This operation is very similar to the `read` operation, with the main difference that a client should assume that the indicated resource is observable.
+This operation is very similar to the `read` operation, with the main difference that a client SHOULD always assume that the indicated resource is observable.
 If the observe option is not supported, the client SHOULD fall back to polling.
 While polling, a client is likely to receive responses only asynchronously (i.e., when the described event actually occurs).
 
