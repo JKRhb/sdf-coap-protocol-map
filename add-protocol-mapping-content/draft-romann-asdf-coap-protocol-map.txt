@@ -187,7 +187,8 @@ Table of Contents
 
 3.4.  Events
 
-   With sdfEvent, the subscribe operation may be used.
+   In the case of sdfEvent, a subscribe operation is supported when
+   using CoAP.
 
    This operation is very similar to the read operation, with the main
    difference that a client should assume that the indicated resource is
