@@ -104,7 +104,8 @@ If the server that receives the request does not support the Observe option, the
 
 ## Actions
 
-With `sdfAction`, the `invoke` operation may be used which uses the `POST` method by default.
+In the case `sdfAction`, an `invoke` operation is supported when using CoAP.
+This operation uses the `POST` method by default.
 
 ## Events
 
