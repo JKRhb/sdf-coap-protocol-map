@@ -96,7 +96,7 @@ Future specifications may extend the set of operations per interaction affordanc
 
 ## Properties
 
-With `sdfProperty`, the `read` (default method: `GET`) and the `write` (default method: `PUT`) operation may be used.
+With `sdfProperty`, a `read` operation (default method: `GET`) and a `write` operation (default method: `PUT`) are supported when using CoAP.
 
 Note that this memo does not define an "observe" operation as it is already covered by the `read` operation:
 With a property that is marked as `observable`, a client can simply include the CoAP Observe option {{-observe}} in its `GET` or `FETCH` request.
