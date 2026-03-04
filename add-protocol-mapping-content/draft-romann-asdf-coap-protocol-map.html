@@ -1257,7 +1257,7 @@ Future specifications may extend the set of operations per interaction affordanc
 <a href="#section-3.2" class="section-number selfRef">3.2. </a><a href="#name-properties" class="section-name selfRef">Properties</a>
         </h3>
 <p id="section-3.2-1">With <code>sdfProperty</code>, the <code>read</code> (default method: <code>GET</code>) and the <code>write</code> (default method: <code>PUT</code>) operation may be used.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
-<p id="section-3.2-2">Note that an "observe" operation is <span class="bcp14">OPTIONAL</span> as it is already covered by the <code>read</code> operation:
+<p id="section-3.2-2">Note that this memo does not define an "observe" operation as it is already covered by the <code>read</code> operation:
 With a property that is marked as <code>observable</code>, a client can simply include the CoAP Observe option <span>[<a href="#RFC7641" class="cite xref">RFC7641</a>]</span> in its <code>GET</code> or <code>FETCH</code> request.
 If the server that receives the request does not support the Observe option, the client can simply fall back to polling.<a href="#section-3.2-2" class="pilcrow">¶</a></p>
 </section>
