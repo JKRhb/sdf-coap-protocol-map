@@ -111,7 +111,8 @@ With `sdfAction`, the `invoke` operation may be used which uses the `POST` metho
 In the case of `sdfEvent`, a `subscribe` operation is supported when using CoAP.
 
 This operation is very similar to the `read` operation, with the main difference that a client should assume that the indicated resource is observable.
-If the observe option is not supported, the client can fall back to polling, where it may receive an answer to its request only asynchronously, once the described event actually occurs.
+If the observe option is not supported, the client SHOULD fall back to polling.
+While polling, a client is likely to receive responses only asynchronously (i.e., when the described event actually occurs).
 
 # Examples
 
