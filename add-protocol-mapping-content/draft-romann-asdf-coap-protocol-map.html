@@ -1277,7 +1277,8 @@ If the server that receives the request does not support the Observe option, the
         </h3>
 <p id="section-3.4-1">In the case of <code>sdfEvent</code>, a <code>subscribe</code> operation is supported when using CoAP.<a href="#section-3.4-1" class="pilcrow">¶</a></p>
 <p id="section-3.4-2">This operation is very similar to the <code>read</code> operation, with the main difference that a client should assume that the indicated resource is observable.
-If the observe option is not supported, the client can fall back to polling, where it may receive an answer to its request only asynchronously, once the described event actually occurs.<a href="#section-3.4-2" class="pilcrow">¶</a></p>
+If the observe option is not supported, the client <span class="bcp14">SHOULD</span> fall back to polling.
+While polling, a client is likely to receive responses only asynchronously (i.e., when the described event actually occurs).<a href="#section-3.4-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
