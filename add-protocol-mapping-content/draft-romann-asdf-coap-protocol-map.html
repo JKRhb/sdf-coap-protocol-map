@@ -1277,7 +1277,7 @@ This operation uses the <code>POST</code> method by default.<a href="#section-3.
 <a href="#section-3.4" class="section-number selfRef">3.4. </a><a href="#name-events" class="section-name selfRef">Events</a>
         </h3>
 <p id="section-3.4-1">In the case of <code>sdfEvent</code>, a <code>subscribe</code> operation is supported when using CoAP.<a href="#section-3.4-1" class="pilcrow">¶</a></p>
-<p id="section-3.4-2">This operation is very similar to the <code>read</code> operation, with the main difference that a client should assume that the indicated resource is observable.
+<p id="section-3.4-2">This operation is very similar to the <code>read</code> operation, with the main difference that a client <span class="bcp14">SHOULD</span> always assume that the indicated resource is observable.
 If the observe option is not supported, the client <span class="bcp14">SHOULD</span> fall back to polling.
 While polling, a client is likely to receive responses only asynchronously (i.e., when the described event actually occurs).<a href="#section-3.4-2" class="pilcrow">¶</a></p>
 </section>
