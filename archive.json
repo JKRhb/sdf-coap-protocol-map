@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-03T00:12:44.700386+00:00",
+  "timestamp": "2026-03-05T00:12:31.167215+00:00",
   "repo": "JKRhb/sdf-coap-protocol-map",
   "labels": [
     {
@@ -56,24 +56,26 @@
       "id": "PR_kwDORZnW6c7GnGNm",
       "title": "Add Rohit and Lorenzo as co-authors",
       "url": "https://github.com/JKRhb/sdf-coap-protocol-map/pull/1",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "JKRhb",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "This PR expands the list of authors with @rohitmohan96 and @lorenzocorneo.",
       "createdAt": "2026-02-26T17:32:39Z",
-      "updatedAt": "2026-02-27T18:19:17Z",
+      "updatedAt": "2026-03-03T11:44:12Z",
       "baseRepository": "JKRhb/sdf-coap-protocol-map",
       "baseRefName": "main",
       "baseRefOid": "6a4e7f790bc55704d679cf59f0d93d38fd579725",
       "headRepository": "JKRhb/sdf-coap-protocol-map",
       "headRefName": "add-co-authors",
       "headRefOid": "7f91878fac2ed6d310b54751c21ecc6c0081f452",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-03-03T11:44:09Z",
+      "mergedAt": "2026-03-03T11:44:09Z",
+      "mergedBy": "JKRhb",
+      "mergeCommit": {
+        "oid": "fbfac21257cf1fb5400baec65ec4c74c4f523723"
+      },
       "comments": [],
       "reviews": [
         {
@@ -88,6 +90,19 @@
           "createdAt": "2026-02-27T18:19:17Z",
           "updatedAt": "2026-02-27T18:19:17Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDORZnW6c7nY0uD",
+          "commit": {
+            "abbreviatedOid": "7f91878"
+          },
+          "author": "lorenzocorneo",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-03-03T11:43:32Z",
+          "updatedAt": "2026-03-03T11:43:32Z",
+          "comments": []
         }
       ]
     },
@@ -96,25 +111,33 @@
       "id": "PR_kwDORZnW6c7Gnhhq",
       "title": "Add initial CDDL schema",
       "url": "https://github.com/JKRhb/sdf-coap-protocol-map/pull/2",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "JKRhb",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "This PR adds an initial CDDL schema inspired by the pre-existing [WoT CoAP Protocol Binding](https://w3c.github.io/wot-binding-templates/bindings/protocols/coap/index.html) as well as the discussion we had over the in SDF Protocol Binding repository (see https://github.com/ietf-wg-asdf/sdf-protocol-mapping/pull/7).",
       "createdAt": "2026-02-26T18:00:22Z",
-      "updatedAt": "2026-02-26T18:05:59Z",
+      "updatedAt": "2026-03-03T12:38:37Z",
       "baseRepository": "JKRhb/sdf-coap-protocol-map",
       "baseRefName": "main",
       "baseRefOid": "6a4e7f790bc55704d679cf59f0d93d38fd579725",
       "headRepository": "JKRhb/sdf-coap-protocol-map",
       "headRefName": "add-cddl",
       "headRefOid": "9563f89beb60ab2e33878195642a006ab8b1863c",
-      "closedAt": null,
+      "closedAt": "2026-03-03T12:38:37Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "JKRhb",
+          "authorAssociation": "OWNER",
+          "body": "I moved the commits from this PR to #3 to make it easier to review the initial version as a whole. Therefore, I will close this PR.",
+          "createdAt": "2026-03-03T12:38:37Z",
+          "updatedAt": "2026-03-03T12:38:37Z"
+        }
+      ],
       "reviews": []
     },
     {
@@ -129,19 +152,344 @@
       "labels": [],
       "body": "This PR adds some initial text to the document that should reflect the content of the CDDL schema (#2) as prose.",
       "createdAt": "2026-02-26T18:16:48Z",
-      "updatedAt": "2026-02-27T01:33:11Z",
+      "updatedAt": "2026-03-04T12:48:23Z",
       "baseRepository": "JKRhb/sdf-coap-protocol-map",
       "baseRefName": "main",
-      "baseRefOid": "2cbc4cdde90482fac021e26f0dac4367a739300d",
+      "baseRefOid": "fbfac21257cf1fb5400baec65ec4c74c4f523723",
       "headRepository": "JKRhb/sdf-coap-protocol-map",
       "headRefName": "add-protocol-mapping-content",
-      "headRefOid": "7654732359b86069d203a376c70817ce666dc986",
+      "headRefOid": "af20d493c1bf20a277ff4b57d5b4c976e9af9a34",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
-      "reviews": []
+      "comments": [
+        {
+          "author": "JKRhb",
+          "authorAssociation": "OWNER",
+          "body": "This PR now also contains the CDDL-related commits that were previously part of #2.",
+          "createdAt": "2026-03-03T12:39:02Z",
+          "updatedAt": "2026-03-03T12:39:02Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDORZnW6c7nY82U",
+          "commit": {
+            "abbreviatedOid": "7654732"
+          },
+          "author": "lorenzocorneo",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "First review",
+          "createdAt": "2026-03-03T11:51:23Z",
+          "updatedAt": "2026-03-03T14:16:56Z",
+          "comments": [
+            {
+              "originalPosition": 16,
+              "body": "```suggestion\nThe Constrained Application Protocol (CoAP) has been originally specified in {{-coap}}, but has since been extended with a number of specifications such as blockwise transfer {{-blockwise}}, the observation of resources {{-observe}}, and additional transport mechanisms {{-coap-tcp}} in addition to UDP and DTLS.\n```",
+              "createdAt": "2026-03-03T11:51:23Z",
+              "updatedAt": "2026-03-03T14:16:56Z"
+            },
+            {
+              "originalPosition": 18,
+              "body": "What is the reason for an SDF protocol mapping to cover exactly the above features? Why not just the base CoAP spec?",
+              "createdAt": "2026-03-03T11:52:51Z",
+              "updatedAt": "2026-03-03T14:16:56Z"
+            },
+            {
+              "originalPosition": 22,
+              "body": "```suggestion\nCoAP can be used with all three kinds of interaction affordances defined in SDF {{-sdf}}, namely, `sdfProperty`, `sdfAction`, and `sdfEvent`.\n```",
+              "createdAt": "2026-03-03T11:54:52Z",
+              "updatedAt": "2026-03-03T14:16:56Z"
+            },
+            {
+              "originalPosition": 30,
+              "body": "Which Thing? And sdfThing? Something else?",
+              "createdAt": "2026-03-03T11:57:32Z",
+              "updatedAt": "2026-03-03T14:16:56Z"
+            },
+            {
+              "originalPosition": 23,
+              "body": "```suggestion\nThe protocol mapping for an affordance MUST specify the `method` as well as an `href`, which combines the URI path and potential query parameters for the resource the interaction affordance is mapped to.\n```",
+              "createdAt": "2026-03-03T12:02:06Z",
+              "updatedAt": "2026-03-03T14:16:56Z"
+            },
+            {
+              "originalPosition": 24,
+              "body": "```suggestion\nTo differentiate between the available transport protocols, a URI `scheme` (with a default value of `coap` for CoAP over TCP) MAY be supplied.\n```",
+              "createdAt": "2026-03-03T12:03:18Z",
+              "updatedAt": "2026-03-03T14:16:56Z"
+            },
+            {
+              "originalPosition": 31,
+              "body": "```suggestion\nInstance-specific information, e.g., a device's `host` name or its `ipAddress`,  is provided via instance-related messages {{-sdf-instance-information}} that pass the values for the `sdfParameters` the protocol mapping defines via designated properties.\n```",
+              "createdAt": "2026-03-03T12:05:50Z",
+              "updatedAt": "2026-03-03T14:16:56Z"
+            },
+            {
+              "originalPosition": 42,
+              "body": "```suggestion\nNote that an \"observe\" operation is OPTIONAL as it is already covered by the `read` operation:\n```",
+              "createdAt": "2026-03-03T12:09:04Z",
+              "updatedAt": "2026-03-03T14:16:56Z"
+            },
+            {
+              "originalPosition": 44,
+              "body": "How does the client will know that the server does not support Observe? Are we planning something to handle that?",
+              "createdAt": "2026-03-03T12:10:37Z",
+              "updatedAt": "2026-03-03T14:16:56Z"
+            },
+            {
+              "originalPosition": 44,
+              "body": "```suggestion\nIf the server that receives the request does not support the Observe option, the client can simply fall back to polling.\n```",
+              "createdAt": "2026-03-03T12:11:03Z",
+              "updatedAt": "2026-03-03T14:16:56Z"
+            },
+            {
+              "originalPosition": 52,
+              "body": "MAY?",
+              "createdAt": "2026-03-03T12:25:37Z",
+              "updatedAt": "2026-03-03T14:16:56Z"
+            },
+            {
+              "originalPosition": 55,
+              "body": "```suggestion\nIf the observe option is not supported, the client can fall back to polling, where it may receive an answer to its request only asynchronously, once the described event actually occurs.\n```",
+              "createdAt": "2026-03-03T12:29:30Z",
+              "updatedAt": "2026-03-03T14:16:56Z"
+            },
+            {
+              "originalPosition": 55,
+              "body": "A bit of repetition from above, see also comment earlier",
+              "createdAt": "2026-03-03T12:30:38Z",
+              "updatedAt": "2026-03-03T14:16:56Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7ndR4D",
+          "commit": {
+            "abbreviatedOid": "59c3d55"
+          },
+          "author": "JKRhb",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-03T15:07:24Z",
+          "updatedAt": "2026-03-03T15:07:24Z",
+          "comments": [
+            {
+              "originalPosition": 18,
+              "body": "(I just noticed that the sentence your comment is referring to is a bit broken, sorry for that \ud83d\ude05)\n\n> What is the reason for an SDF protocol mapping to cover exactly the above features? Why not just the base CoAP spec?\n\nBlockwise transfer as well as Observe are not part of the base specification but are essential for using CoAP in practice. Only supporting the base specification would not be enough IMHO, since we cannot really use a generic extension mechanism (such as HTTP headers). Also see the rationale given in the [WoT CoAP Binding](https://w3c.github.io/wot-binding-templates/bindings/protocols/coap/index.html#overview) on this topic.\n\nRegarding this sentence in particular, I rephrased it a bit in order to fix its slightly broken structure:\n\n```suggestion\nA protocol mapping for CoAP should support the features currently defined for CoAP, but it should also be extensible to cover potential future additions to the CoAP specification body as well.\n```",
+              "createdAt": "2026-03-03T15:07:24Z",
+              "updatedAt": "2026-03-03T15:07:50Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7ndV2X",
+          "commit": {
+            "abbreviatedOid": "59c3d55"
+          },
+          "author": "JKRhb",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-03T15:10:05Z",
+          "updatedAt": "2026-03-03T15:10:06Z",
+          "comments": [
+            {
+              "originalPosition": 30,
+              "body": "Thing was meant here in the broader sense \u2013 maybe \u201cdevice\u201d could be less ambiguous here?\n\n\n```suggestion\nThat means that information such as URI paths will be shared by all device instances that adhere to the given model.\n```",
+              "createdAt": "2026-03-03T15:10:05Z",
+              "updatedAt": "2026-03-03T15:10:06Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7ndYNE",
+          "commit": {
+            "abbreviatedOid": "59c3d55"
+          },
+          "author": "JKRhb",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-03T15:11:44Z",
+          "updatedAt": "2026-03-03T15:11:44Z",
+          "comments": [
+            {
+              "originalPosition": 60,
+              "body": "Ah, I just noticed that the new wording is not exactly what I meant \u2013 maybe this formulation is a bit clearer now?\n\n```suggestion\nNote that this memo does not define an \"observe\" operation as it is already covered by the `read` operation:\n```",
+              "createdAt": "2026-03-03T15:11:44Z",
+              "updatedAt": "2026-03-03T15:11:44Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7ndaTD",
+          "commit": {
+            "abbreviatedOid": "59c3d55"
+          },
+          "author": "JKRhb",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "I tried to apply a couple of refinements, let me know if you have additional suggestions here :)",
+          "createdAt": "2026-03-03T15:12:54Z",
+          "updatedAt": "2026-03-03T15:22:18Z",
+          "comments": [
+            {
+              "originalPosition": 58,
+              "body": "```suggestion\r\nWith `sdfProperty`, a `read` operation (default method: `GET`) and a `write` operation (default method: `PUT`) are supported when using CoAP.\r\n```",
+              "createdAt": "2026-03-03T15:12:54Z",
+              "updatedAt": "2026-03-04T12:26:43Z"
+            },
+            {
+              "originalPosition": 66,
+              "body": "```suggestion\nIn the case `sdfAction`, an `invoke` operation is supported when using CoAP.\nThis operation uses the `POST` method by default.\n```",
+              "createdAt": "2026-03-03T15:13:53Z",
+              "updatedAt": "2026-03-03T15:22:18Z"
+            },
+            {
+              "originalPosition": 52,
+              "body": "```suggestion\nIn the case of `sdfEvent`, a `subscribe` operation is supported when using CoAP.\n```",
+              "createdAt": "2026-03-03T15:15:10Z",
+              "updatedAt": "2026-03-03T15:22:18Z"
+            },
+            {
+              "originalPosition": 72,
+              "body": "```suggestion\nThis operation is very similar to the `read` operation, with the main difference that a client SHOULD always assume that the indicated resource is observable.\n```",
+              "createdAt": "2026-03-03T15:16:26Z",
+              "updatedAt": "2026-03-03T15:22:18Z"
+            },
+            {
+              "originalPosition": 73,
+              "body": "```suggestion\nIf the observe option is not supported, the client SHOULD fall back to polling.\nWhile polling, a client is likely to receive responses only asynchronously (i.e., when the described event actually occurs).\n```",
+              "createdAt": "2026-03-03T15:21:39Z",
+              "updatedAt": "2026-03-03T15:22:18Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7nd4nI",
+          "commit": {
+            "abbreviatedOid": "7654732"
+          },
+          "author": "JKRhb",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-03T15:32:25Z",
+          "updatedAt": "2026-03-03T15:32:25Z",
+          "comments": [
+            {
+              "originalPosition": 44,
+              "body": "If the server does not support Observe, it will simply ignore the Observe option in the client's request and won't include one in its own response. After learning that the server does not support Observe (via the missing option), the client can simply fall back to polling.\r\n\r\nThis is also implied in [section 6 of RFC 7641](https://datatracker.ietf.org/doc/html/rfc7641#section-6). Do you think we should be a bit more explicit here regarding how to handle this scenario? In the [WoT CoAP Binding](https://w3c.github.io/wot-binding-templates/bindings/protocols/coap/index.html#default-mappings), we had added some recommendations in that regard.",
+              "createdAt": "2026-03-03T15:32:25Z",
+              "updatedAt": "2026-03-03T15:32:25Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7nd67m",
+          "commit": {
+            "abbreviatedOid": "7654732"
+          },
+          "author": "JKRhb",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-03T15:33:58Z",
+          "updatedAt": "2026-03-03T15:33:58Z",
+          "comments": [
+            {
+              "originalPosition": 55,
+              "body": "I hope the suggestion in https://github.com/JKRhb/sdf-coap-protocol-map/pull/3/changes#r2878901794 improves this paragraph?",
+              "createdAt": "2026-03-03T15:33:58Z",
+              "updatedAt": "2026-03-03T15:33:59Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7nzMk-",
+          "commit": {
+            "abbreviatedOid": "7654732"
+          },
+          "author": "lorenzocorneo",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-04T11:51:24Z",
+          "updatedAt": "2026-03-04T11:51:24Z",
+          "comments": [
+            {
+              "originalPosition": 18,
+              "body": "I would add to the text what you mentioned above, that is a good motivation.",
+              "createdAt": "2026-03-04T11:51:24Z",
+              "updatedAt": "2026-03-04T11:51:24Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7nzPSl",
+          "commit": {
+            "abbreviatedOid": "7654732"
+          },
+          "author": "lorenzocorneo",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-04T11:53:39Z",
+          "updatedAt": "2026-03-04T11:53:39Z",
+          "comments": [
+            {
+              "originalPosition": 44,
+              "body": "I think we should add some more information. Ideally, I would strive to have a self-contained document without the need to just no N other RFCs/I-Ds.",
+              "createdAt": "2026-03-04T11:53:39Z",
+              "updatedAt": "2026-03-04T11:53:39Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7nzUPD",
+          "commit": {
+            "abbreviatedOid": "59c3d55"
+          },
+          "author": "lorenzocorneo",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-04T11:57:39Z",
+          "updatedAt": "2026-03-04T11:57:40Z",
+          "comments": [
+            {
+              "originalPosition": 58,
+              "body": "A verb is missing?",
+              "createdAt": "2026-03-04T11:57:40Z",
+              "updatedAt": "2026-03-04T11:57:40Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7nz3rU",
+          "commit": {
+            "abbreviatedOid": "59c3d55"
+          },
+          "author": "JKRhb",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-04T12:27:03Z",
+          "updatedAt": "2026-03-04T12:27:03Z",
+          "comments": [
+            {
+              "originalPosition": 58,
+              "body": "Thank you, @lorenzocorneo! I updated the suggestion above :)",
+              "createdAt": "2026-03-04T12:27:03Z",
+              "updatedAt": "2026-03-04T12:27:03Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
