@@ -73,8 +73,9 @@ The definitions of {{-sdf}}, {{-sdf-protocol-mapping}}, and {{-sdf-instance-info
 # CoAP Protocol Mapping
 
 The Constrained Application Protocol (CoAP) has been originally specified in {{-coap}}, but has since been extended with a number of specifications such as blockwise transfer {{-blockwise}}, the observation of resources {{-observe}}, and additional transport mechanisms {{-coap-tcp}} in addition to UDP and DTLS.
+The blockwise transfer and Observe extensions in particular are essential for using CoAP in practice, which is why covering the only the base specification in this document would not not enough.
 
-A protocol mapping for CoAP should cover these features, but should also be extensible to potential future additions to the CoAP family of standards take into account as well.
+A protocol mapping for CoAP should support the features currently defined for CoAP, but it should also be extensible to cover potential future additions to the CoAP specification body as well.
 
 ## General Considerations
 
@@ -83,7 +84,8 @@ The protocol mapping for an affordance MUST specify the `method` as well as an `
 To differentiate between the available transport protocols, a URI `scheme` (with a default value of `coap` for CoAP over TCP) MAY be supplied.
 
 Other general qualities for CoAP include parameters for blockwise transfer, the available and accepted Content-Formats, as well as the minimal polling interval that is accepted by the respective CoAP server.
-Note that since CoAP messages do not allow for the use of generic headers as HTTP does, all of these qualities map to standardized CoAP options that are registered with IANA.
+Note that since CoAP messages do not allow for the use of generic headers as HTTP does, all of these qualities map to standardized CoAP options with specific semantics that are registered with IANA.
+For this reason, we also need to explicitly cover relevant features with our protocol mapping specification.
 
 In contrast to the WoT approach, the protocol binding information that is supplied via this document is targeting the _model_ level.
 That means that information such as URI paths will be shared by all device instances that adhere to the given model.
