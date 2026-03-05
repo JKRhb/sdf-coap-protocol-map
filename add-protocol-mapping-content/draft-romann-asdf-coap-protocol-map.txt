@@ -4,8 +4,8 @@
 
 A Semantic Definition Format for Data and Interactions of ThingsJ. Romann
 Internet-Draft                                        Universität Bremen
-Intended status: Standards Track                            4 March 2026
-Expires: 5 September 2026
+Intended status: Standards Track                            5 March 2026
+Expires: 6 September 2026
 
 
  Semantic Definition Format (SDF): Protocol Mapping for the Constrained
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 September 2026.
+   This Internet-Draft will expire on 6 September 2026.
 
 Copyright Notice
 
@@ -126,11 +126,14 @@ Table of Contents
    specified in [RFC7252], but has since been extended with a number of
    specifications such as blockwise transfer [RFC7959], the observation
    of resources [RFC7641], and additional transport mechanisms [RFC8323]
-   in addition to UDP and DTLS.
+   in addition to UDP and DTLS.  The blockwise transfer and Observe
+   extensions in particular are essential for using CoAP in practice,
+   which is why covering the only the base specification in this
+   document would not not enough.
 
-   A protocol mapping for CoAP should cover these features, but should
-   also be extensible to potential future additions to the CoAP family
-   of standards take into account as well.
+   A protocol mapping for CoAP should support the features currently
+   defined for CoAP, but it should also be extensible to cover potential
+   future additions to the CoAP specification body as well.
 
 3.1.  General Considerations
 
@@ -148,7 +151,9 @@ Table of Contents
    minimal polling interval that is accepted by the respective CoAP
    server.  Note that since CoAP messages do not allow for the use of
    generic headers as HTTP does, all of these qualities map to
-   standardized CoAP options that are registered with IANA.
+   standardized CoAP options with specific semantics that are registered
+   with IANA.  For this reason, we also need to explicitly cover
+   relevant features with our protocol mapping specification.
 
    In contrast to the WoT approach, the protocol binding information
    that is supplied via this document is targeting the _model_ level.
