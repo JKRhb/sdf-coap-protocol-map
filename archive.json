@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-05T00:12:31.167215+00:00",
+  "timestamp": "2026-03-08T00:11:06.905069+00:00",
   "repo": "JKRhb/sdf-coap-protocol-map",
   "labels": [
     {
@@ -152,13 +152,13 @@
       "labels": [],
       "body": "This PR adds some initial text to the document that should reflect the content of the CDDL schema (#2) as prose.",
       "createdAt": "2026-02-26T18:16:48Z",
-      "updatedAt": "2026-03-04T12:48:23Z",
+      "updatedAt": "2026-03-05T20:40:15Z",
       "baseRepository": "JKRhb/sdf-coap-protocol-map",
       "baseRefName": "main",
       "baseRefOid": "fbfac21257cf1fb5400baec65ec4c74c4f523723",
       "headRepository": "JKRhb/sdf-coap-protocol-map",
       "headRefName": "add-protocol-mapping-content",
-      "headRefOid": "af20d493c1bf20a277ff4b57d5b4c976e9af9a34",
+      "headRefOid": "168e2db19d071671593966d618cc1af54bf0cf0c",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -486,6 +486,26 @@
               "body": "Thank you, @lorenzocorneo! I updated the suggestion above :)",
               "createdAt": "2026-03-04T12:27:03Z",
               "updatedAt": "2026-03-04T12:27:03Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7obfoX",
+          "commit": {
+            "abbreviatedOid": "7654732"
+          },
+          "author": "JKRhb",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-05T20:40:14Z",
+          "updatedAt": "2026-03-05T20:40:15Z",
+          "comments": [
+            {
+              "originalPosition": 18,
+              "body": "I tried to incorporate the text from above as well as my suggestion via 168e2db19d071671593966d618cc1af54bf0cf0c, I hope that is an improvement.",
+              "createdAt": "2026-03-05T20:40:15Z",
+              "updatedAt": "2026-03-05T20:40:15Z"
             }
           ]
         }
