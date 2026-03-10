@@ -136,6 +136,7 @@ IANA is requested to add the following entry to the "SDF Protocol Mapping" regis
 | Protocol map | Protocol Name                           | Description                       | Reference     |
 | ------------ | --------------------------------------- | --------------------------------- | ------------- |
 | coap         | Constrained Application Protocol (CoAP) | Protocol mapping for CoAP devices | This document |
+{: #registry-entry title="SDF Protocol Mapping registry entry" align="left"}
 
 # Formal Syntax of the SDF Protocol Mapping for CoAP  {#syntax}
 
