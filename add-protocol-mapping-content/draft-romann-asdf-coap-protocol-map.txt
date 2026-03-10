@@ -216,8 +216,8 @@ Table of Contents
 
 6.1.  SDF Protocol Mapping Registry Entry
 
-   IANA is requested to create a new entry for the "SDF Protocol
-   Mapping" registry as described by this document:
+   IANA is requested to add the following entry to the "SDF Protocol
+   Mapping" registry.
 
    +==========+=========================+==================+===========+
    | Protocol | Protocol Name           | Description      | Reference |
@@ -228,7 +228,7 @@ Table of Contents
    |          |                         | CoAP devices     |           |
    +----------+-------------------------+------------------+-----------+
 
-                                  Table 1
+                Table 1: SDF Protocol Mapping registry entry
 
 7.  Formal Syntax of the SDF Protocol Mapping for CoAP
 
