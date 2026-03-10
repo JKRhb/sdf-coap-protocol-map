@@ -4,8 +4,8 @@
 
 A Semantic Definition Format for Data and Interactions of ThingsJ. Romann
 Internet-Draft                                        Universität Bremen
-Intended status: Standards Track                            5 March 2026
-Expires: 6 September 2026
+Intended status: Standards Track                           10 March 2026
+Expires: 11 September 2026
 
 
  Semantic Definition Format (SDF): Protocol Mapping for the Constrained
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 6 September 2026.
+   This Internet-Draft will expire on 11 September 2026.
 
 Copyright Notice
 
@@ -79,6 +79,7 @@ Table of Contents
    4.  Examples
    5.  Security Considerations
    6.  IANA Considerations
+     6.1.  SDF Protocol Mapping Registry Entry
    7.  Formal Syntax of the SDF Protocol Mapping for CoAP
    8.  References
      8.1.  Normative References
@@ -213,7 +214,21 @@ Table of Contents
 
 6.  IANA Considerations
 
-   This document has no IANA actions.
+6.1.  SDF Protocol Mapping Registry Entry
+
+   IANA is requested to create a new entry for the "SDF Protocol
+   Mapping" registry as described by this document:
+
+   +==========+=========================+==================+===========+
+   | Protocol | Protocol Name           | Description      | Reference |
+   | map      |                         |                  |           |
+   +==========+=========================+==================+===========+
+   | coap     | Constrained Application | Protocol         | This      |
+   |          | Protocol (CoAP)         | mapping for      | document  |
+   |          |                         | CoAP devices     |           |
+   +----------+-------------------------+------------------+-----------+
+
+                                  Table 1
 
 7.  Formal Syntax of the SDF Protocol Mapping for CoAP
 
