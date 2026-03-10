@@ -1245,6 +1245,7 @@ The blockwise transfer and Observe extensions in particular are essential for us
         </h3>
 <p id="section-3.1-1">CoAP can be used with all three kinds of interaction affordances defined in SDF <span>[<a href="#RFC9880" class="cite xref">RFC9880</a>]</span>, namely, <code>sdfProperty</code>, <code>sdfAction</code>, and <code>sdfEvent</code>.
 The protocol mapping for an affordance <span class="bcp14">MUST</span> specify the <code>method</code> as well as an <code>href</code>, which combines the URI path and potential query parameters for the resource the interaction affordance is mapped to.
+The <code>href</code> quality supports URI templates <span>[<a href="#RFC6570" class="cite xref">RFC6570</a>]</span> whose variables can be associated with data qualities via the <code>sdfVariables</code> map. 
 To differentiate between the available transport protocols, a URI <code>scheme</code> (with a default value of <code>coap</code> for CoAP over TCP) <span class="bcp14">MAY</span> be supplied.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
 <p id="section-3.1-2">Other general qualities for CoAP include parameters for blockwise transfer, the available and accepted Content-Formats, as well as the minimal polling interval that is accepted by the respective CoAP server.
 Note that since CoAP messages do not allow for the use of generic headers as HTTP does, all of these qualities map to standardized CoAP options with specific semantics that are registered with IANA.
@@ -1376,12 +1377,17 @@ coap-parameters = {
 
 common-coap-definitions = (
   sdfParameters: coap-parameters
+  sdfVariables: named&lt;same-document-pointer&gt;
 )
+
+; Shortcut for a map that gives names to instances of X
+; (has keys of type text and values of type X)
+named&lt;X&gt; = { * text =&gt; X }
 
 coap-vocabulary = {
   scheme: "coap" / "coaps" / "coap+tcp" / "coaps+tcp" / "coap+ws" / "coaps+ws"
   method: "GET" / "POST" / "PUT" / "DELETE" / "FETCH" / "PATCH" / "iPATCH" ; TODO: Can we make this list extendable?
-  href: text ; TODO: Should we support URI Template variables here?
+  href: text
 
   ; An affordance can support multiple Content-Formats as input/output
   ? contentFormat: [ * uint ]
@@ -1452,6 +1458,10 @@ coap-event-operations = {
 <dt id="RFC2119">[RFC2119]</dt>
         <dd>
 <span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC6570">[RFC6570]</dt>
+        <dd>
+<span class="refAuthor">Gregorio, J.</span>, <span class="refAuthor">Fielding, R.</span>, <span class="refAuthor">Hadley, M.</span>, <span class="refAuthor">Nottingham, M.</span>, and <span class="refAuthor">D. Orchard</span>, <span class="refTitle">"URI Template"</span>, <span class="seriesInfo">RFC 6570</span>, <span class="seriesInfo">DOI 10.17487/RFC6570</span>, <time datetime="2012-03" class="refDate">March 2012</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6570">https://www.rfc-editor.org/rfc/rfc6570</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC7252">[RFC7252]</dt>
         <dd>

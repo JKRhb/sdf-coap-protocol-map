@@ -143,9 +143,11 @@ Table of Contents
    sdfEvent.  The protocol mapping for an affordance MUST specify the
    method as well as an href, which combines the URI path and potential
    query parameters for the resource the interaction affordance is
-   mapped to.  To differentiate between the available transport
-   protocols, a URI scheme (with a default value of coap for CoAP over
-   TCP) MAY be supplied.
+   mapped to.  The href quality supports URI templates [RFC6570] whose
+   variables can be associated with data qualities via the sdfVariables
+   map.  To differentiate between the available transport protocols, a
+   URI scheme (with a default value of coap for CoAP over TCP) MAY be
+   supplied.
 
    Other general qualities for CoAP include parameters for blockwise
    transfer, the available and accepted Content-Formats, as well as the
@@ -259,12 +261,17 @@ Table of Contents
 
    common-coap-definitions = (
      sdfParameters: coap-parameters
+     sdfVariables: named<same-document-pointer>
    )
+
+   ; Shortcut for a map that gives names to instances of X
+   ; (has keys of type text and values of type X)
+   named<X> = { * text => X }
 
    coap-vocabulary = {
      scheme: "coap" / "coaps" / "coap+tcp" / "coaps+tcp" / "coap+ws" / "coaps+ws"
      method: "GET" / "POST" / "PUT" / "DELETE" / "FETCH" / "PATCH" / "iPATCH" ; TODO: Can we make this list extendable?
-     href: text ; TODO: Should we support URI Template variables here?
+     href: text
 
      ; An affordance can support multiple Content-Formats as input/output
      ? contentFormat: [ * uint ]
@@ -332,6 +339,11 @@ Table of Contents
               Requirement Levels", BCP 14, RFC 2119,
               DOI 10.17487/RFC2119, March 1997,
               <https://www.rfc-editor.org/rfc/rfc2119>.
+
+   [RFC6570]  Gregorio, J., Fielding, R., Hadley, M., Nottingham, M.,
+              and D. Orchard, "URI Template", RFC 6570,
+              DOI 10.17487/RFC6570, March 2012,
+              <https://www.rfc-editor.org/rfc/rfc6570>.
 
    [RFC7252]  Shelby, Z., Hartke, K., and C. Bormann, "The Constrained
               Application Protocol (CoAP)", RFC 7252,
