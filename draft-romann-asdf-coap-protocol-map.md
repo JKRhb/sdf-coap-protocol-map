@@ -129,7 +129,13 @@ The security considerations of {{-sdf}} as well as {{-coap}} apply to this docum
 
 # IANA Considerations
 
-This document has no IANA actions.
+## SDF Protocol Mapping Registry Entry
+
+IANA is requested to create a new entry for the "SDF Protocol Mapping" registry as described by this document:
+
+| Protocol map | Protocol Name                           | Description                       | Reference     |
+| ------------ | --------------------------------------- | --------------------------------- | ------------- |
+| coap         | Constrained Application Protocol (CoAP) | Protocol mapping for CoAP devices | This document |
 
 # Formal Syntax of the SDF Protocol Mapping for CoAP  {#syntax}
 
