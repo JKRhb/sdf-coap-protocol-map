@@ -131,7 +131,7 @@ The security considerations of {{-sdf}} as well as {{-coap}} apply to this docum
 
 ## SDF Protocol Mapping Registry Entry
 
-IANA is requested to create a new entry for the "SDF Protocol Mapping" registry as described by this document:
+IANA is requested to add the following entry to the "SDF Protocol Mapping" registry.
 
 | Protocol map | Protocol Name                           | Description                       | Reference     |
 | ------------ | --------------------------------------- | --------------------------------- | ------------- |
