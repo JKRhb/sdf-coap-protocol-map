@@ -40,7 +40,12 @@ author:
     email: lorenzo.corneo@ericsson.com
 
 normative:
+  RFC6570: uri-templates
   RFC7252: coap
+  RFC7641: observe
+  RFC7959: blockwise
+  RFC8323: coap-tcp
+  RFC8610: cddl
   RFC9880: sdf
   I-D.ietf-asdf-sdf-protocol-mapping: sdf-protocol-mapping
   I-D.ietf-asdf-instance-information: sdf-instance-information
@@ -80,6 +85,58 @@ The definitions of {{-sdf}}, {{-sdf-protocol-mapping}}, and {{-sdf-instance-info
 
 {::boilerplate bcp14-tagged}
 
+# CoAP Protocol Mapping
+
+The Constrained Application Protocol (CoAP) has been originally specified in {{-coap}}, but has since been extended with a number of specifications such as blockwise transfer {{-blockwise}}, the observation of resources {{-observe}}, and additional transport mechanisms {{-coap-tcp}} in addition to UDP and DTLS.
+The blockwise transfer and Observe extensions in particular are essential for using CoAP in practice, which is why covering the only the base specification in this document would not not enough.
+
+A protocol mapping for CoAP should support the features currently defined for CoAP, but it should also be extensible to cover potential future additions to the CoAP specification body as well.
+
+## General Considerations
+
+CoAP can be used with all three kinds of interaction affordances defined in SDF {{-sdf}}, namely, `sdfProperty`, `sdfAction`, and `sdfEvent`.
+The protocol mapping for an affordance MUST specify the `method` as well as an `href`, which combines the URI path and potential query parameters for the resource the interaction affordance is mapped to.
+The `href` quality supports URI templates {{-uri-templates}} whose variables can be associated with data qualities via the `sdfVariables` map. <!-- DISCUSS: Should we rather also use sdfParameters for this? -->
+To differentiate between the available transport protocols, a URI `scheme` (with a default value of `coap` for CoAP over TCP) MAY be supplied.
+
+Other general qualities for CoAP include parameters for blockwise transfer, the available and accepted Content-Formats, as well as the minimal polling interval that is accepted by the respective CoAP server.
+Note that since CoAP messages do not allow for the use of generic headers as HTTP does, all of these qualities map to standardized CoAP options with specific semantics that are registered with IANA.
+For this reason, we also need to explicitly cover relevant features with our protocol mapping specification.
+
+In contrast to the WoT approach, the protocol binding information that is supplied via this document is targeting the _model_ level.
+That means that information such as URI paths will be shared by all device instances that adhere to the given model.
+Instance-specific information, e.g., a device's `host` name or its `ipAddress`,  is provided via instance-related messages {{-sdf-instance-information}} that pass the values for the `sdfParameters` the protocol mapping defines via designated properties.
+The selected `sdfProperty` definitions are indicated via JSON pointers within the `sdfParameters` map.
+
+Per interaction affordance type, the CoAP Protocol Mapping defines at least one type of operation (`read`, `write`, `invoke`, and `subscribe`).
+Currently, the definitions for these different operations look almost identitical, with the main difference being the default method per operation.
+Future specifications may extend the set of operations per interaction affordance type.
+
+## Properties
+
+With `sdfProperty`, a `read` operation (default method: `GET`) and a `write` operation (default method: `PUT`) are supported when using CoAP.
+
+Note that this memo does not define an "observe" operation as it is already covered by the `read` operation:
+With a property that is marked as `observable`, a client can simply include the CoAP Observe option {{-observe}} in its `GET` or `FETCH` request.
+If the server that receives the request does not support the Observe option, the client can simply fall back to polling.
+
+## Actions
+
+In the case `sdfAction`, an `invoke` operation is supported when using CoAP.
+This operation uses the `POST` method by default.
+
+## Events
+
+In the case of `sdfEvent`, a `subscribe` operation is supported when using CoAP.
+
+This operation is very similar to the `read` operation, with the main difference that a client SHOULD always assume that the indicated resource is observable.
+If the observe option is not supported, the client SHOULD fall back to polling.
+While polling, a client is likely to receive responses only asynchronously (i.e., when the described event actually occurs).
+
+# Examples
+
+TODO
+
 # Security Considerations
 
 The security considerations of {{-sdf}} as well as {{-coap}} apply to this document as well.
@@ -88,8 +145,25 @@ The security considerations of {{-sdf}} as well as {{-coap}} apply to this docum
 
 # IANA Considerations
 
-This document has no IANA actions.
+## SDF Protocol Mapping Registry Entry
 
+IANA is requested to add the following entry to the "SDF Protocol Mapping" registry.
+
+| Protocol map | Protocol Name                           | Description                       | Reference     |
+| ------------ | --------------------------------------- | --------------------------------- | ------------- |
+| coap         | Constrained Application Protocol (CoAP) | Protocol mapping for CoAP devices | This document |
+{: #registry-entry title="SDF Protocol Mapping registry entry" align="left"}
+
+# Formal Syntax of the SDF Protocol Mapping for CoAP  {#syntax}
+
+This normative appendix describes the syntax of this protocol mapping definition using CDDL {{-cddl}}.
+
+<!-- TODO: Actually add extension points -->
+Via the defined extension points, future specifications may add new definitions to the CDDL schema.
+
+~~~ cddl
+{::include sdf-coap-protocol-map.cddl}
+~~~
 
 --- back
 
