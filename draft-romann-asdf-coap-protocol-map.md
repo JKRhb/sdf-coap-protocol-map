@@ -26,6 +26,7 @@ author:
     email: jan.romann@uni-bremen.de
 
 normative:
+  RFC6570: uri-templates
   RFC7252: coap
   RFC7641: observe
   RFC7959: blockwise
@@ -81,6 +82,7 @@ A protocol mapping for CoAP should support the features currently defined for Co
 
 CoAP can be used with all three kinds of interaction affordances defined in SDF {{-sdf}}, namely, `sdfProperty`, `sdfAction`, and `sdfEvent`.
 The protocol mapping for an affordance MUST specify the `method` as well as an `href`, which combines the URI path and potential query parameters for the resource the interaction affordance is mapped to.
+The `href` quality supports URI templates {{-uri-templates}} whose variables can be associated with data qualities via the `sdfVariables` map. <!-- DISCUSS: Should we rather also use sdfParameters for this? -->
 To differentiate between the available transport protocols, a URI `scheme` (with a default value of `coap` for CoAP over TCP) MAY be supplied.
 
 Other general qualities for CoAP include parameters for blockwise transfer, the available and accepted Content-Formats, as well as the minimal polling interval that is accepted by the respective CoAP server.
