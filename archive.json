@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-10T00:16:14.053017+00:00",
+  "timestamp": "2026-03-12T00:10:55.425509+00:00",
   "repo": "JKRhb/sdf-coap-protocol-map",
   "labels": [
     {
@@ -152,13 +152,13 @@
       "labels": [],
       "body": "This PR adds some initial text to the document that should reflect the content of the CDDL schema (#2) as prose.",
       "createdAt": "2026-02-26T18:16:48Z",
-      "updatedAt": "2026-03-05T20:40:15Z",
+      "updatedAt": "2026-03-10T20:10:53Z",
       "baseRepository": "JKRhb/sdf-coap-protocol-map",
       "baseRefName": "main",
       "baseRefOid": "fbfac21257cf1fb5400baec65ec4c74c4f523723",
       "headRepository": "JKRhb/sdf-coap-protocol-map",
       "headRefName": "add-protocol-mapping-content",
-      "headRefOid": "168e2db19d071671593966d618cc1af54bf0cf0c",
+      "headRefOid": "2b82dd70c1728ed46e400a3c9d3e13f5a1f86e87",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -506,6 +506,246 @@
               "body": "I tried to incorporate the text from above as well as my suggestion via 168e2db19d071671593966d618cc1af54bf0cf0c, I hope that is an improvement.",
               "createdAt": "2026-03-05T20:40:15Z",
               "updatedAt": "2026-03-05T20:40:15Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7p0uvr",
+          "commit": {
+            "abbreviatedOid": "168e2db"
+          },
+          "author": "rohitmohan96",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-10T14:33:39Z",
+          "updatedAt": "2026-03-10T14:33:40Z",
+          "comments": [
+            {
+              "originalPosition": 88,
+              "body": "We need to add an entry in the \"SDF Protocol Mapping\" registry for \"coap\".",
+              "createdAt": "2026-03-10T14:33:40Z",
+              "updatedAt": "2026-03-10T14:33:40Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7p0x9a",
+          "commit": {
+            "abbreviatedOid": "168e2db"
+          },
+          "author": "rohitmohan96",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-10T14:35:01Z",
+          "updatedAt": "2026-03-10T14:35:01Z",
+          "comments": [
+            {
+              "originalPosition": 42,
+              "body": "Should the `href` be a URI template? It is possible for the url to have instance information unless we want to limit that somehow.",
+              "createdAt": "2026-03-10T14:35:01Z",
+              "updatedAt": "2026-03-10T14:35:01Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7p37aH",
+          "commit": {
+            "abbreviatedOid": "168e2db"
+          },
+          "author": "JKRhb",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-10T16:26:18Z",
+          "updatedAt": "2026-03-10T16:26:18Z",
+          "comments": [
+            {
+              "originalPosition": 88,
+              "body": "I added a first attempt via 4c6c75d8471fbafae611963cfb0301194df20282",
+              "createdAt": "2026-03-10T16:26:18Z",
+              "updatedAt": "2026-03-10T16:26:19Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7p55js",
+          "commit": {
+            "abbreviatedOid": "168e2db"
+          },
+          "author": "JKRhb",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-10T17:42:45Z",
+          "updatedAt": "2026-03-10T17:42:45Z",
+          "comments": [
+            {
+              "originalPosition": 42,
+              "body": "Supporting URI templates definitely makes sense :) I wasn't entirely sure yet how to best model them, but I suppose we can have more discussion based on concrete examples.\r\n\r\nFor now, I introduced a separate quality named `sdfVariables` for defining the schema of URI variables, but maybe we can also merge it with `sdfParamters`.",
+              "createdAt": "2026-03-10T17:42:45Z",
+              "updatedAt": "2026-03-10T17:42:45Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7p6pZT",
+          "commit": {
+            "abbreviatedOid": "2b82dd7"
+          },
+          "author": "rohitmohan96",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-10T18:16:35Z",
+          "updatedAt": "2026-03-10T18:16:35Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "Can you use the `property-protocol-map` defined in sdf-protocol-map \u00a73.1.1 here?",
+              "createdAt": "2026-03-10T18:16:35Z",
+              "updatedAt": "2026-03-10T18:16:35Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7p6z_z",
+          "commit": {
+            "abbreviatedOid": "2b82dd7"
+          },
+          "author": "JKRhb",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-10T18:23:25Z",
+          "updatedAt": "2026-03-10T18:23:25Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "Good point, that would simplify this definition.\n\nThis reminds me, though, that `read` and `write` have different default methods, which should probably also be reflected in the CDDL schema. Can we also cover that using the `property-protocol-map`? Or do we need to introduce different definitions for that anyway?",
+              "createdAt": "2026-03-10T18:23:25Z",
+              "updatedAt": "2026-03-10T18:24:33Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7p84V0",
+          "commit": {
+            "abbreviatedOid": "2b82dd7"
+          },
+          "author": "rohitmohan96",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-10T19:57:47Z",
+          "updatedAt": "2026-03-10T19:57:47Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "Oh that is a good point. \nThe text says:\n>  To extend $$SDF-PROPERTY-PROTOCOL-MAP for a new protocol (e.g., \"new-\n   protocol\"), implementors MUST use the property-protocol-map generic\n   with the protocol name and a map type defining the protocol-specific\n   attributes.\n\nIt shouldn't be a MUST if it doesn't allow for having two different mappings for read and write. \nLet me see how to rework that CDDL in the sdf-protocol-mapping draft. ",
+              "createdAt": "2026-03-10T19:57:47Z",
+              "updatedAt": "2026-03-10T20:00:41Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7p9BTH",
+          "commit": {
+            "abbreviatedOid": "2b82dd7"
+          },
+          "author": "rohitmohan96",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-10T20:04:28Z",
+          "updatedAt": "2026-03-10T20:04:28Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "Although, in this case, wouldn't it just be `property-protocol-map<\"coap\", coap-vocabulary>`?",
+              "createdAt": "2026-03-10T20:04:28Z",
+              "updatedAt": "2026-03-10T20:04:28Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7p9E6k",
+          "commit": {
+            "abbreviatedOid": "2b82dd7"
+          },
+          "author": "JKRhb",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-10T20:07:03Z",
+          "updatedAt": "2026-03-10T20:07:03Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "Hmm, yeah, that would work in general, with maybe the exception of the default methods, though? Or is there an elegant solution for that?",
+              "createdAt": "2026-03-10T20:07:03Z",
+              "updatedAt": "2026-03-10T20:07:03Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7p9Gli",
+          "commit": {
+            "abbreviatedOid": "2b82dd7"
+          },
+          "author": "JKRhb",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-10T20:08:25Z",
+          "updatedAt": "2026-03-10T20:08:25Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "In any case, the MUST could probably be turned into a SHOULD to just give a recommendation/point to the best practice here.",
+              "createdAt": "2026-03-10T20:08:25Z",
+              "updatedAt": "2026-03-10T20:08:25Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7p9IYm",
+          "commit": {
+            "abbreviatedOid": "2b82dd7"
+          },
+          "author": "rohitmohan96",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-10T20:10:01Z",
+          "updatedAt": "2026-03-10T20:10:01Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "The default method will be the same definition but with the `.default` control operator?",
+              "createdAt": "2026-03-10T20:10:01Z",
+              "updatedAt": "2026-03-10T20:10:01Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c7p9Jb_",
+          "commit": {
+            "abbreviatedOid": "2b82dd7"
+          },
+          "author": "JKRhb",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-03-10T20:10:52Z",
+          "updatedAt": "2026-03-10T20:10:53Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "> The default method will be the same definition but with the `.default` control operator?\r\n\r\nExactly :)",
+              "createdAt": "2026-03-10T20:10:52Z",
+              "updatedAt": "2026-03-10T20:10:53Z"
             }
           ]
         }
