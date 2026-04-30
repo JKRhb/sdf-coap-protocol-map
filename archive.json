@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-04-28T00:23:59.940489+00:00",
+  "timestamp": "2026-04-30T00:24:41.100087+00:00",
   "repo": "JKRhb/sdf-coap-protocol-map",
   "labels": [
     {
@@ -152,7 +152,7 @@
       "labels": [],
       "body": "This PR adds some initial text to the document that should reflect the content of the CDDL schema (#2) as prose.",
       "createdAt": "2026-02-26T18:16:48Z",
-      "updatedAt": "2026-03-10T20:10:53Z",
+      "updatedAt": "2026-04-29T18:09:26Z",
       "baseRepository": "JKRhb/sdf-coap-protocol-map",
       "baseRefName": "main",
       "baseRefOid": "fbfac21257cf1fb5400baec65ec4c74c4f523723",
@@ -746,6 +746,26 @@
               "body": "> The default method will be the same definition but with the `.default` control operator?\r\n\r\nExactly :)",
               "createdAt": "2026-03-10T20:10:52Z",
               "updatedAt": "2026-03-10T20:10:53Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDORZnW6c76T_NI",
+          "commit": {
+            "abbreviatedOid": "2b82dd7"
+          },
+          "author": "rohitmohan96",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-29T18:09:26Z",
+          "updatedAt": "2026-04-29T18:09:26Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "I have this PR https://github.com/ietf-wg-asdf/sdf-protocol-mapping/pull/33. Does it address this issue?",
+              "createdAt": "2026-04-29T18:09:26Z",
+              "updatedAt": "2026-04-29T18:09:26Z"
             }
           ]
         }
